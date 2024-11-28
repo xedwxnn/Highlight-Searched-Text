@@ -48,6 +48,14 @@ input {
     color: white;
 }
 
+input::placeholder {
+    transition: .3s;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
 button {
     border: none;
     border-radius: 5px;
