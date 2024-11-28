@@ -6,12 +6,14 @@ function searchText() {
     let inputValue = input.value.trim();
     let textContent = text.textContent;
 
-    text.innerText = textContent;
-
     if (inputValue !== '') {
         const regex = new RegExp(`(${inputValue})`, 'gi');
         const highlightedText = textContent.replace(regex, '<span style="background-color: rgb(68, 56, 40);">$1</span>');
         text.innerHTML = highlightedText;
+    }
+
+    else if(inputValue === '') {
+        text.innerText = text.textContent;
     }
 }
 
